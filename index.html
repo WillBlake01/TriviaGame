@@ -14,11 +14,15 @@
 		<br>
 		<h1>Premier League Trivia!</h1>
 
-		<h3>Time Remaining: <span id="timer"></span></h3>
+			<button type="button" id="start" class="btn btn-,lg btn-default">START</button>
 
-		<button type="button" id="start" class="btn btn-,lg btn-default">START</button>
+		<div id="results">
+			
+		</div>
 
 		<div id="quiz">
+			<h3>Time Remaining: <span id="timer"></span></h3>
+
 			<div id="question1">
 				<h3>How many clubs competed in the Premier League's first season, in 1992-93?</h3>
 					<label><input type="radio" class="radioButton" value="a">18</label>
@@ -79,10 +83,11 @@
 					<label><input type="radio" class="radioButton" value="b">Chelsea</label>
 					<label><input type="radio" class="radioButton" value="c">Manchester United</label>
 			</div>
+
+			<br>
+				<button type="button" id="submit" class="btn btn-primary">Submit</button>
+
 		</div>
-		
-		<br>
-		<button type="button" id="submit" class="btn btn-primary">Submit</button>
 
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<script type="text/javascript" src="assets/javascript/app.js"></script>
