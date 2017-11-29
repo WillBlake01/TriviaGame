@@ -1,5 +1,6 @@
 
 
+$("#start").on("click", function() {
 //counter
 var count=90;
 
@@ -15,3 +16,5 @@ function timer() {
 		}
 document.getElementById("timer").innerHTML=count + " seconds";
 }
+
+});
