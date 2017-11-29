@@ -38,12 +38,12 @@ $("#submit").on("click", function() {
 
 	$("#quiz").hide().toggleClass("quizContainer");
 
-	
-	
+
+
 	$("#results").html("<h3>All Done!</h3>");
-	$("#results").append("<h3>Correct Answers: " + correctAnswers + "<h3>");
-	$("#results").append("<h3>Incorrect Answers: " + incorrectAnswers + "<h3>");
-	$("#results").append("<h3>Unanswered: " + unanswered + "<h3>");
+	$("#results").append("<p>Correct Answers: " + correctAnswers + "</p>");
+	$("#results").append("<p>Incorrect Answers: " + incorrectAnswers + "</p>");
+	$("#results").append("<p>Unanswered: " + unanswered + "</p>");
 
 
 	if (answers === radioButton.values()) {
