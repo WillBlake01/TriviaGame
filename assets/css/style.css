@@ -1,0 +1,20 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	background-image: url("../images/cup.jpg");
+}
+
+.container {
+	width: 700px;
+	height: 800px;
+	background-color: yellow;
+	margin: 0 auto;
+	margin-top: 60px;
+	text-align: center;
+}
+
+h1 {
+	color: blue;
+}
