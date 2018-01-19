@@ -1,7 +1,5 @@
+$(document).ready(function () {
 
-$(document).ready(function(){
-
-var radioButton = $(".radioButton");
 var correctAnswers = 0;
 var incorrectAnswers = 0;
 var unanswered = 0;
@@ -13,7 +11,8 @@ $("#quiz").hide();
 //on start
 $("#start").on("click", function() {
 $("#start").hide();
-$("#quiz").show().toggleClass("quizContainer");
+$("#quiz").show();
+$(".container").toggleClass("quizContainer");
 
 	//counter
 	var count=90;
@@ -36,7 +35,8 @@ $("#quiz").show().toggleClass("quizContainer");
 
 $("#submit").on("click", function() {
 
-	$("#quiz").hide().toggleClass("quizContainer");
+	$("#quiz").hide();
+	$(".container").toggleClass("quizContainer");
 
 
 
