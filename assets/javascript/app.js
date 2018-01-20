@@ -1,59 +1,61 @@
+// On page load
 $(document).ready(function () {
 
-var correctAnswers = 0;
-var incorrectAnswers = 0;
-var unanswered = 0;
+  var correctAnswers = '';
+  var incorrectAnswers = '';
+  var unanswered = '';
 
-var answers = [];
+  var answers = [];
 
-$("#quiz").hide();
+  $('#quiz').hide();
 
-//on start
-$("#start").on("click", function() {
-$("#start").hide();
-$("#quiz").show();
-$(".container").toggleClass("quizContainer");
+  // Start button functionality
+  $('#start').on('click', function () {
+    $('#start').hide();
+    $('#quiz').show();
+    $('.container').toggleClass('quizContainer');
 
-	//counter
-	var count=90;
+    // Start counter
+    var count = 90;
 
-	var counter=setInterval(timer, 1000);
+    var counter = setInterval(timer, 1000);
 
-	function timer() {
-		count=count-1;
-		if (count <= 0)
-			{
-				clearInterval(counter);
+    function timer() {
+      count = count - 1;
+      if (count <= 0) {
+        clearInterval(counter);
 
-				return;
-			}
-	document.getElementById("timer").innerHTML=count + " seconds";
-}
+        return;
+      }
 
-//on submit
-});
+      document.getElementById('timer').innerHTML = count + ' seconds';
 
-$("#submit").on("click", function() {
+      // End counter
+      // End start button functionality
+    }
+  });
 
-	$("#quiz").hide();
-	$(".container").toggleClass("quizContainer");
+  // Submit button functionality
+  $('#submit').on('click', function () {
 
+    $('#quiz').hide();
+    $('.container').toggleClass('quizContainer');
 
+    $('#results').html('<h3>All Done!!!</h3>');
+    $('#results').append('<p>Correct Answers: ' + correctAnswers + '</p>');
+    $('#results').append('<p>Incorrect Answers: ' + incorrectAnswers + '</p>');
+    $('#results').append('<p>Unanswered: ' + unanswered + '</p>');
 
-	$("#results").html("<h3>All Done!</h3>");
-	$("#results").append("<p>Correct Answers: " + correctAnswers + "</p>");
-	$("#results").append("<p>Incorrect Answers: " + incorrectAnswers + "</p>");
-	$("#results").append("<p>Unanswered: " + unanswered + "</p>");
+    // End submit button functionality
 
+    if (answers === radioButton.values()) {
+      correctAnswers++;
+      console.log(correctAnswers);
+    } else {
+      incorrectAnswers++;
+      console.log(incorrectAnswers);
+    }
 
-	if (answers === radioButton.values()) {
-	correctAnswers++;
-	console.log(correctAnswers);
-	} else {
-	incorrectAnswers++;
-	console.log(incorrectAnswers);
-}
-
-});
+  });
 
 });
