@@ -35,3 +35,17 @@ body {
 h1 {
 	color: blue;
 }
+
+@media screen and (max-width: 980px) {
+
+}
+@media screen and (max-width: 768px) {
+	.quizContainer {
+		height: 1300px;
+	}
+}
+@media screen and (max-width: 667px) {
+	.quizContainer {
+		height: 1300px;
+	}
+}
