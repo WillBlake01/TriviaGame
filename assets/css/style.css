@@ -41,13 +41,9 @@ h1 {
 }
 @media screen and (max-width: 768px) {
 	.quizContainer {
-		height: 1300px;
-		background-color: yellow;
+		/* margin-bottom: none; */
 	}
 }
 @media screen and (max-width: 667px) {
-	.quizContainer {
-		height: 1300px;
-		background-color: yellow;
-	}
+
 }
