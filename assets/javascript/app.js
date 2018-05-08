@@ -158,6 +158,22 @@ var game = {
       }
     });
 
+    $.each($("input[name='question-7']:checked"), function () {
+      if ($(this).val() === questions[8].correctAnswer) {
+        game.correct++;
+      } else {
+        game.incorrect++;
+      }
+    });
+
+    $.each($("input[name='question-7']:checked"), function () {
+      if ($(this).val() === questions[9].correctAnswer) {
+        game.correct++;
+      } else {
+        game.incorrect++;
+      }
+    });
+
     this.result();
 
   },
